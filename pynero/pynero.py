@@ -1,5 +1,6 @@
 import numpy as np
 
+
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
@@ -31,7 +32,7 @@ model = tf.keras.models.Sequential()
 
 #Добавляем слои
 #Первый слой делаем из наших изображений 28x28
-#переводим из в вектор длиной 28х28=784 элемента 
+#переводим из думерного массива в вектор длиной 28х28=784 элемента 
 model.add(tf.keras.layers.Flatten())
 #первый скрытый уровень
 model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
@@ -53,5 +54,7 @@ val_loss, val_acc = model.evaluate(x_test, y_test)
 print(val_loss)
 print(val_acc)
 
+print(y_train[0])
 
+show_test()
 
