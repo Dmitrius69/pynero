@@ -5,11 +5,19 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 
 def show_test():
-    fig1 = plt.figure(1, )
-    im_x_train = plt.imshow(x_train[0])
+    fig1 = plt.figure(1, figsize=(10,10))
+    for i in range(0, 9):
+        plt.subplot(1,10,i+1)
+        m_x_train = plt.imshow(x_train[i])
+        plt.xlabel(y_train[i])
+    fig12= plt.figure(2, figsize=(10,10))
+    for i in range(0, 9):
+        plt.subplot(1,10,i+1)
+        m_x_train = plt.imshow(x_test[i])
+        plt.xlabel(y_test[i])
 
-    fig2 = plt.figure(2, )
-    im_x_test = plt.imshow(x_test[0])
+    #fig2 = plt.figure(2, )
+    #im_x_test = plt.imshow(x_test[0])
 
     plt.show()
     return 1
